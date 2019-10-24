@@ -9,14 +9,14 @@ const mapDispatchToProps =  dispatch => ({
     createNewBooking: bookInfo => {
       const bookItem = {
         packageNumber: bookInfo.inputPackageNumber,
-        pickupTime: bookInfo.inputPickupTime
+        pickUptime: bookInfo.inputPickupTime
       };
       BookResource.createBooking(bookItem)
         .then(res => res.json())
-        .then(({packageNumber, pickupTime}) => {
+        .then(({packageNumber, pickUptime}) => {
           dispatch({
             type: 'ADD_TODO',
-            payload: {packageNumber, pickupTime}
+            payload: {packageNumber, pickUptime}
           })
         })
     }
