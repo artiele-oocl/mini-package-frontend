@@ -11,7 +11,7 @@ export default class BookItem extends Component {
     }
     dispatch = () => {
         console.log(this.state)
-        this.props.onNewTodoAdded(this.state.inputValue);
+        this.props.createNewBooking(this.state);
         this.setState(this.baseState);
     }
     cancelBook = (e) => {
