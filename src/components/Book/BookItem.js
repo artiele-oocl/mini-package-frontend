@@ -10,8 +10,7 @@ export default class BookItem extends Component {
         this.baseState = this.state;
     }
     dispatch = () => {
-        // this.props.createNewBooking(this.state);
-        console.log(this.props)
+        this.props.createNewBooking(this.state);
         this.setState(this.baseState);
     }
     cancelBook = (e) => {

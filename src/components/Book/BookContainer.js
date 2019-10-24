@@ -10,15 +10,14 @@ const mapDispatchToProps =  dispatch => ({
         packageNumber: bookInfo.inputPackageNumber,
         pickupTime: bookInfo.inputPickupTime
       };
-    //   console.log(bookItem)
-    //   TodoResource.createTodo(newTodoItem)
-    //     .then(res => res.json())
-    //     .then(({id, status, content}) => {
-    //       dispatch({
-    //         type: 'ADD_TODO',
-    //         payload: {id, status, content}
-    //       })
-    //     })
+      TodoResource.createTodo(bookItem)
+        .then(res => res.json())
+        .then(({packageNumber, pickupTime}) => {
+          dispatch({
+            type: 'ADD_TODO',
+            payload: {packageNumber, pickupTime}
+          })
+        })
     }
 });
 

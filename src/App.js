@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import BookItem from './components/Book/BookItem';
+import BookContainer from './components/Book/BookContainer';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <BookItem />
+        <BookContainer />
       </header>
     </div>
   );
