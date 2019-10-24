@@ -3,17 +3,16 @@ import BookItem from './BookItem';
 
 export default class BookItemWrapper extends Component {
     
-    createNewBooking = bookInfo => {
+    createNewBookingWrapper = bookInfo => {
         if(bookInfo) {
           this.props.createNewBooking(bookInfo);
         }
+        console.log(bookInfo)
     };
     render() {
         return (
-          <div className="todo-wrapper">
-            <TodoInput onNewTodoAdded={this.addNewTodo}/>
-            <Todos todos={this.props.todos} patchStatus={this.patchStatus}/>
-            <BookItem createNewBooking={this.createNewBooking}/>
+          <div className="book-wrapper">
+            <BookItem createNewBooking={this.createNewBookingWrapper}/>
           </div>
         )
       }

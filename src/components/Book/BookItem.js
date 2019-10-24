@@ -10,8 +10,8 @@ export default class BookItem extends Component {
         this.baseState = this.state;
     }
     dispatch = () => {
-        console.log(this.state)
-        this.props.createNewBooking(this.state);
+        // this.props.createNewBooking(this.state);
+        console.log(this.props)
         this.setState(this.baseState);
     }
     cancelBook = (e) => {
@@ -37,7 +37,7 @@ export default class BookItem extends Component {
                     Pickup Time:
                     <input onChange={this.handleInputPickupTime}
                     value={this.state.inputPickupTime}
-                    type="text" placeholder="Enter package number..." name="pickup_time" />
+                    type="text" placeholder="YYYY-MM-DD HH:MM:SS" name="pickup_time" />
                 </label>
                 <button type="submit" onClick={this.dispatch}>Book</button>
                 <button type="button" onClick={this.cancelBook}>Cancel</button>
