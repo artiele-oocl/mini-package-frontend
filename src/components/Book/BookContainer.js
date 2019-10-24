@@ -1,5 +1,6 @@
 import { connect } from 'react-redux'
 import BookItemWrapper from './BookItemWrapper';
+import BookResource from '../../api/BookResource';
 
 const mapStateToProps = state => ({
 });
@@ -10,7 +11,7 @@ const mapDispatchToProps =  dispatch => ({
         packageNumber: bookInfo.inputPackageNumber,
         pickupTime: bookInfo.inputPickupTime
       };
-      TodoResource.createTodo(bookItem)
+      BookResource.createBooking(bookItem)
         .then(res => res.json())
         .then(({packageNumber, pickupTime}) => {
           dispatch({

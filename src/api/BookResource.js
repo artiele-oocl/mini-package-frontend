@@ -1,5 +1,5 @@
 export default {
-    createTodo: (bookInfo) => fetch(
+    createBooking: (bookInfo) => fetch(
       "http://localhost:9090/api/bookings", {
         mode: 'cors',
         method: 'POST',
